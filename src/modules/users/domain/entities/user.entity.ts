@@ -26,7 +26,7 @@ export class User {
   @Column({ type: 'enum', enum: UserRole, default: UserRole.VIEWER })
   role: UserRole;
 
-  @Column({ name: 'supabase_id', unique: true, nullable: true })
+  @Column({ name: 'supabase_id', type: 'uuid', unique: true, nullable: true })
   supabaseId: string | null;
 
   @Column({ name: 'is_active', default: true })
