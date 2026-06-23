@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AgentModule } from './modules/agent/agent.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { GateEntity } from './modules/rfps/domain/entities/gate.entity';
 import { ProposalEntity } from './modules/rfps/domain/entities/propuesta.entity';
@@ -29,6 +30,7 @@ import { UsersModule } from './modules/users/users.module';
           : false,
       }),
     }),
+    AgentModule,
     AuthModule,
     UsersModule,
     RfpsModule,
